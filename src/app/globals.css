@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-primary: var(--primary-base);
+  --color-success: var(--success-base);
+  --color-background: var(--bg-primary);
+  --color-background-secondary: var(--bg-secondary);
+  --color-foreground: var(--fg);
+  --color-card-bg: var(--card-bg);
+  --color-card-border: var(--card-border);
+  --color-card-border-hover: var(--card-border-hover);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+:root {
+  /* Light Mode Variables (Vibrant) */
+  color-scheme: light;
+  --primary-base: #0284c7; /* Darker sky blue for better contrast on white */
+  --success-base: #10B981;
+  --bg-primary: #F8FAFC; /* Bright off-white */
+  --bg-secondary: #F1F5F9; /* Soft cool grey */
+  --fg: #0F172A; /* Slate 900 for high contrast text */
+  --card-bg: #FFFFFF;
+  --card-border: rgba(15, 23, 42, 0.1);
+  --card-border-hover: rgba(2, 132, 199, 0.4);
+}
+
+[data-theme='dark'] {
+  /* Dark Mode Variables (Default) */
+  color-scheme: dark;
+  --primary-base: #38BDF8;
+  --success-base: #10B981;
+  --bg-primary: #0B0F17; /* Deep slate/black */
+  --bg-secondary: #0E1525; /* Darker subtle grey */
+  --fg: #F8FAFC;
+  --card-bg: rgba(30, 41, 59, 0.5);
+  --card-border: rgba(56, 189, 248, 0.1);
+  --card-border-hover: rgba(56, 189, 248, 0.5);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Custom glowing effects */
+.glow-effect {
+  box-shadow: 0 0 15px rgba(56, 189, 248, 0.2);
+  transition: box-shadow 0.3s ease, border-color 0.3s ease, transform 0.3s ease;
+}
+
+.glow-effect:hover {
+  box-shadow: 0 0 40px rgba(56, 189, 248, 0.6);
 }
