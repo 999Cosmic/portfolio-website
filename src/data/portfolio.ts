@@ -50,7 +50,7 @@ export const portfolioData = {
   skills: {
     languages: ["Python", "C", "C++", "TypeScript", "JavaScript", "PHP", "SQL/MySQL", "HTML/CSS"],
     frameworks: ["React", "Next.js", "Flask"],
-    tools: ["Git", "Postman", "SwaggerHub", "Jira", "REST APIs", "spaCy", "OpenCode CLI", "Wireshark"],
+    tools: ["Git", "Postman", "SwaggerHub", "Jira", "REST APIs", "spaCy", "OpenCode CLI", "Wireshark", "Nmap", "Metasploit"],
     cloud: ["AWS (EC2)", "Linux (Ubuntu)", "Bash/Shell", "LAMP Stack", "Virtual Box", "Networking Fundamentals"]
   },
   experience: [
@@ -80,7 +80,8 @@ export const portfolioData = {
       "Modeling and Simulation",
       "System Administration and Maintenance",
       "Matrix & Linear Algebra",
-      "Statistical Methods I & II"
+      "Statistical Methods I & II",
+      "Cyber Defense Analysis"
     ]
   }
 };
